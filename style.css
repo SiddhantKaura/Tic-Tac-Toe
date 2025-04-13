@@ -1,0 +1,101 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f0f4f8;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007BFF;
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+}
+
+#game-container {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    height: 100px;
+    width: 50%;
+}
+
+.row:not(:last-child) {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.cell {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+}
+
+.cell.o-marker {
+    color: #FF6B6B
+}
+
+.cell.x-marker {
+    color: #007BFF
+}
+
+.cell:not(:last-child) {
+    border-right: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.game-verdict {
+    visibility: hidden;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+    padding: 12px;
+}
+
+.game-verdict.visible {
+    visibility: visible;
+}
+
+.play-again-button {
+    margin-top: 12px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.play-again-button:hover {
+    background-color: #0056b3;
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        height: 90vh;
+    }
+
+    .row {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .row {
+        width: 90%;
+    }
+}
